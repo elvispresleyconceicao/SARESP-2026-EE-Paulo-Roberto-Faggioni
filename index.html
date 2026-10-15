@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Primeiro Dia | EE Professor Doutor Paulo Roberto Faggioni</title>
+
+    <meta name="description"
+          content="Portal de avaliações da EE Professor Doutor Paulo Roberto Faggioni. Acesse os formulários do primeiro dia por ano escolar.">
+
+    <style>
+        :root {
+            --azul-escuro: #102a43;
+            --azul: #1769aa;
+            --azul-hover: #0f4f85;
+            --dourado: #f2bd45;
+            --fundo: #f3f6fa;
+            --branco: #ffffff;
+            --texto: #243447;
+            --cinza: #617386;
+            --borda: #dce4ec;
+            --sombra: 0 8px 24px rgba(16, 42, 67, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--fundo);
+            color: var(--texto);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--azul);
+        }
+
+        .cabecalho {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            border-bottom: 5px solid var(--dourado);
+            padding: 28px 20px;
+        }
+
+        .cabecalho-conteudo {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Espaço opcional para o logotipo */
+        .logo {
+            width: 82px;
+            height: 82px;
+            object-fit: contain;
+            background: var(--branco);
+            border-radius: 12px;
+            padding: 5px;
+            display: block;
+        }
+
+        .identidade {
+            flex: 1;
+        }
+
+        .identidade .etiqueta {
+            display: block;
+            color: var(--dourado);
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .identidade h1 {
+            margin: 0;
+            font-size: clamp(1.35rem, 3vw, 2rem);
+            line-height: 1.3;
+        }
+
+        .identidade p {
+            margin: 7px 0 0;
+            color: #dce8f4;
+        }
+
+        .container {
+            width: min(1080px, calc(100% - 32px));
+            margin: 0 auto;
+        }
+
+        .principal {
+            padding: 42px 0 48px;
+        }
+
+        .introducao {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+
+        .selo {
+            display: inline-block;
+            background: #fff0c9;
+            color: #76520b;
+            padding: 6px 14px;
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .introducao h2 {
+            color: var(--azul-escuro);
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            line-height: 1.2;
+            margin: 16px 0 12px;
+        }
+
+        .introducao p {
+            margin: 0;
+            color: var(--cinza);
+            font-size: 1.05rem;
+        }
+
+        .grade-titulo {
+            margin: 0 0 18px;
+            font-size: 1.2rem;
+            color: var(--azul-escuro);
+        }
+
+        .grade {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .cartao {
+            background: var(--branco);
+            border: 1px solid var(--borda);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--sombra);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .numero-turma {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 58px;
+            height: 48px;
+            padding: 0 10px;
+            background: #e6f1fb;
+            color: var(--azul-escuro);
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .cartao h3 {
+            margin: 16px 0 5px;
+            font-size: 1.25rem;
+            color: var(--azul-escuro);
+        }
+
+        .cartao p {
+            margin: 0 0 20px;
+            color: var(--cinza);
+            flex: 1;
+        }
+
+        .botao {
+            display: inline-block;
+            background: var(--azul);
+            color: var(--branco);
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            padding: 12px 18px;
+            border-radius: 9px;
+            transition: background 0.2s ease;
+        }
+
+        .botao:hover,
+        .botao:focus {
+            background: var(--azul-hover);
+        }
+
+        .orientacoes {
+            margin-top: 28px;
+            padding: 20px 22px;
+            background: #e9f2fb;
+            border-left: 4px solid var(--azul);
+            border-radius: 8px;
+        }
+
+        .orientacoes h3 {
+            margin: 0 0 8px;
+            color: var(--azul-escuro);
+            font-size: 1.05rem;
+        }
+
+        .orientacoes p {
+            margin: 0;
+        }
+
+        .rodape {
+            background: var(--azul-escuro);
+            color: var(--branco);
+            padding: 32px 20px;
+        }
+
+        .rodape-conteudo {
+            max-width: 1080px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 28px;
+        }
+
+        .rodape h2 {
+            color: var(--dourado);
+            font-size: 1.1rem;
+            margin: 0 0 12px;
+        }
+
+        .rodape p {
+            margin: 7px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .rodape a {
+            color: #c9e4ff;
+        }
+
+        .rodape .observacao {
+            font-size: 0.9rem;
+            color: #dce8f4;
+        }
+
+        .creditos {
+            max-width: 1080px;
+            margin: 24px auto 0;
+            padding-top: 16px;
+            border-top: 1px solid #36516b;
+            text-align: center;
+            color: #dce8f4;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 680px) {
+            .cabecalho {
+                padding: 22px 16px;
+            }
+
+            .cabecalho-conteudo {
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .principal {
+                padding-top: 30px;
+            }
+
+            .grade {
+                grid-template-columns: 1fr;
+            }
+
+            .cartao {
+                padding: 21px;
+            }
+
+            .rodape-conteudo {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .botao {
+                width: 100%;
+            }
+        }
+
+        @media print {
+            .botao {
+                border: 1px solid var(--azul);
+            }
+
+            .cartao,
+            .orientacoes {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho-conteudo">
+
+            <!--
+            LOGOTIPO OPCIONAL:
+            1. Coloque o arquivo da imagem na mesma pasta deste index.html.
+            2. Troque logo.png pelo nome da imagem.
+            3. Retire os comentários desta linha e da linha seguinte.
+            4. Altere display: none para display: block em .logo, no CSS.
+            -->
+            <img class="logo" src="Logo.jpg" alt="Logotipo da EE Professor Doutor Paulo Roberto Faggioni">
+
+            <div class="identidade">
+                <span class="etiqueta">Portal de avaliações</span>
+                <h1>EE Professor Doutor Paulo Roberto Faggioni</h1>
+                <p>Simulados escolares • SARESP digital • Acesso por ano escolar</p>
+            </div>
+
+        </div>
+    </header>
+
+    <main class="container principal">
+
+        <section class="introducao">
+            <span class="selo">PRIMEIRO DIA</span>
+            <h2>Acesse sua prova</h2>
+            <p>
+                Selecione abaixo o ano escolar correspondente à sua turma
+                para abrir o formulário de avaliação.
+            </p>
+        </section>
+
+        <section aria-labelledby="titulo-turmas">
+            <h2 class="grade-titulo" id="titulo-turmas">
+                Escolha sua turma
+            </h2>
+
+            <div class="grade">
+
+                <article class="cartao">
+                    <span class="numero-turma">6º</span>
+                    <h3>6º ano do Ensino Fundamental</h3>
+                    <p>Acesse o formulário destinado aos estudantes do 6º ano.</p>
+                    <a
+                        class="botao"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdK5yNgYjfJAeWcXH1XGXtRSzYayuGgKuGA-JCtBseQEOforg/viewform?usp=dialog"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Iniciar prova
+                    </a>
+                </article>
+
+                <article class="cartao">
+                    <span class="numero-turma">7º</span>
+                    <h3>7º ano do Ensino Fundamental</h3>
+                    <p>Acesse o formulário destinado aos estudantes do 7º ano.</p>
+                    <a
+                        class="botao"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSd94-fRmKf5Qugmdw535Fo3YaMgeNt-8Jqvuf1ewxb5DunhQA/viewform?usp=dialog"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Iniciar prova
+                    </a>
+                </article>
+
+                <article class="cartao">
+                    <span class="numero-turma">8º</span>
+                    <h3>8º ano do Ensino Fundamental</h3>
+                    <p>Acesse o formulário destinado aos estudantes do 8º ano.</p>
+                    <a
+                        class="botao"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSen6rjqvII8PZWZptmQuVa9GRIxpmFwwreIRomr9O5sBWL5bw/viewform?usp=dialog"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Iniciar prova
+                    </a>
+                </article>
+
+                <article class="cartao">
+                    <span class="numero-turma">9º</span>
+                    <h3>9º ano do Ensino Fundamental</h3>
+                    <p>Acesse o formulário destinado aos estudantes do 9º ano.</p>
+                    <a
+                        class="botao"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSel8Rf7tJJo9GLled0ZyUfHa72P22mRuo6IFKEWyJH-UAuZjQ/viewform?usp=dialog"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Iniciar prova
+                    </a>
+                </article>
+
+                <article class="cartao">
+                    <span class="numero-turma">1º</span>
+                    <h3>1º ano do Ensino Médio</h3>
+                    <p>Acesse o formulário destinado aos estudantes do 1º ano.</p>
+                    <a
+                        class="botao"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSfwSo4uJ0wg3vVXjGWM0-UtXecsut3mDjVbg2cC9AcQk0M2WQ/viewform?usp=dialog"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Iniciar prova
+                    </a>
+                </article>
+
+                <article class="cartao">
+                    <span class="numero-turma">2º</span>
+                    <h3>2º ano do Ensino Médio</h3>
+                    <p>Acesse o formulário destinado aos estudantes do 2º ano.</p>
+                    <a
+                        class="botao"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSeQmKkywpp4ROOIqKdb2O1g7dI6-fuq9ENVZSmc6hY9unEQFw/viewform?usp=dialog"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        Iniciar prova
+                    </a>
+                </article>
+
+            </div>
+        </section>
+
+        <aside class="orientacoes">
+            <h3>Orientações aos estudantes</h3>
+            <p>
+                Confira o ano escolar antes de abrir o formulário.
+                Leia as instruções da avaliação e preencha os dados solicitados
+                com atenção. Em caso de dificuldade técnica, procure a equipe
+                escolar.
+            </p>
+        </aside>
+
+    </main>
+
+    <footer class="rodape">
+        <div class="rodape-conteudo">
+
+            <section>
+                <h2>Contato da escola</h2>
+
+                <p>
+                    <strong>Endereço:</strong><br>
+                    Rua Tabacarana, 10<br>
+                    Bairro Limoeiro<br>
+                    São Paulo - SP, CEP 08051-100
+                </p>
+
+                <p>
+                    <strong>Telefone:</strong>
+                    <a href="tel:+551125415941">(11) 2041-9584</a>
+                </p>
+
+                <p>
+                    <strong>E-mail:</strong><br>
+                    <a href="mailto:E902573A@EDUCACAO.SP.GOV.BR">
+                        E902573A@EDUCACAO.SP.GOV.BR
+                    </a>
+                </p>
+            </section>
+
+        </div>
+
+        <div class="creditos">
+            EE Professor Doutor Paulo Roberto Faggioni • Primeiro Dia
+        </div>
+    </footer>
+
+</body>
+</html>
+```
